@@ -41,7 +41,7 @@ echo "Downloading version '$branch'"
 set -x
 
 # Download and build the standard library
-git clone --branch ${branch} https://github.com/cosmosis-developers/cosmosis-standard-library
+git clone --branch ${branch} ${CSL_REPO:-"https://github.com/cosmosis-developers/cosmosis-standard-library"}
 pushd cosmosis-standard-library
 
 # it turns out that if you source a script with no arguments
